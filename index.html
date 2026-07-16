@@ -21,6 +21,7 @@
         th { background: #1a5276; color: white; }
         tr:nth-child(even) { background: #f2f2f2; }
         .highlight { background: #eafaf1; border-left: 4px solid #2ecc71; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+        .important { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
         .footer { text-align: center; padding: 2rem 1rem; color: #777; font-size: 0.85rem; border-top: 1px solid #ddd; margin-top: 2rem; }
         a { color: #1a5276; }
     </style>
@@ -40,115 +41,123 @@
     </div>
 
     <h2>1. Introduction</h2>
-    <p>Karobar360 ("we," "our," or "us") is a business accounting and bookkeeping application developed by AsaanDigital. This privacy policy explains how we collect, use, store, and protect your personal information when you use our mobile application.</p>
-    <p>By using Karobar360, you agree to the collection and use of information as described in this policy. We will not use or share your information with anyone except as described herein.</p>
+    <p>Karobar360 ("we," "our," or "us") is a business accounting and bookkeeping application developed by Asaan Digital. This privacy policy explains how we handle your personal information when you use our mobile application.</p>
+    <p>By using Karobar360, you agree to the practices described in this policy.</p>
 
-    <h2>2. Information We Collect</h2>
-    <p>We collect the following types of data to provide and improve our services:</p>
+    <h2>2. Offline-First: Your Data Stays on Your Device</h2>
+    <div class="important">
+        <strong>Karobar360 is an offline-first app.</strong> Your account and all your data — transactions, customers, udhaar and qist records, committees (kameti), budgets, and reports — are stored <strong>only on your own device</strong>. We do not keep a copy of your business or personal records on our servers.
+    </div>
+    <p>This means your business data never leaves your phone. If you uninstall the app, all data stored by the app is removed from the device.</p>
+
+    <h2>3. Information Accessed On-Device</h2>
+    <p>Karobar360 uses certain device permissions to provide its features. The following data is accessed and processed <strong>entirely on your device</strong> and is never transmitted to our servers or any third party:</p>
 
     <table>
         <thead>
             <tr>
-                <th>Data Type</th>
-                <th>What We Collect</th>
-                <th>Purpose</th>
-                <th>Required/Optional</th>
+                <th>Permission</th>
+                <th>What It Does</th>
+                <th>Data Leaves Device?</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>Personal Info</strong></td>
-                <td>Name, phone number (from contacts you select)</td>
-                <td>App functionality — contact picker for customer/vendor records</td>
-                <td>Optional</td>
+                <td><strong>Location</strong> (Precise &amp; Approximate)</td>
+                <td>Used for branch auto-fill and geolocation features within the app</td>
+                <td>No — stays on device</td>
             </tr>
             <tr>
-                <td><strong>Precise Location</strong></td>
-                <td>GPS-based precise location</td>
-                <td>App functionality — branch auto-fill and geolocation features</td>
-                <td>Optional</td>
+                <td><strong>Contacts</strong> (Read &amp; Write)</td>
+                <td>Contact picker to quickly add customer/vendor names and phone numbers</td>
+                <td>No — stays on device</td>
             </tr>
             <tr>
-                <td><strong>Approximate Location</strong></td>
-                <td>Network-based approximate location</td>
-                <td>App functionality — general geolocation for business setup</td>
-                <td>Optional</td>
+                <td><strong>Camera</strong></td>
+                <td>Capturing invoice and receipt photos for attachments</td>
+                <td>No — stays on device</td>
             </tr>
             <tr>
-                <td><strong>Photos</strong></td>
-                <td>Photos captured via camera or selected from gallery</td>
-                <td>App functionality — invoice and receipt photo attachments</td>
-                <td>Optional</td>
+                <td><strong>Photos / Media</strong></td>
+                <td>Selecting images from your gallery to attach to records</td>
+                <td>No — stays on device</td>
             </tr>
             <tr>
-                <td><strong>Audio</strong></td>
-                <td>Voice input via microphone</td>
-                <td>App functionality — speech recognition for hands-free input</td>
-                <td>Optional</td>
+                <td><strong>Microphone</strong></td>
+                <td>Speech recognition for hands-free voice input. Audio is processed in real time and converted to text — raw audio is never stored or transmitted</td>
+                <td>No — processed ephemerally</td>
             </tr>
             <tr>
-                <td><strong>Contacts</strong></td>
-                <td>Contact names and phone numbers</td>
-                <td>App functionality — contact picker to quickly add customers/vendors</td>
-                <td>Optional</td>
-            </tr>
-            <tr>
-                <td><strong>Device Identifiers</strong></td>
-                <td>Device token for push notifications</td>
-                <td>App functionality — delivering payment reminders and notifications</td>
-                <td>Required</td>
+                <td><strong>Biometrics / Fingerprint</strong></td>
+                <td>Secure login using Android's BiometricPrompt API. Biometric data is handled entirely by your device's hardware</td>
+                <td>No — never leaves device</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>3. How We Use Your Information</h2>
-    <p>All data collected is used solely for app functionality:</p>
-    <ul>
-        <li><strong>Contacts and Personal Info:</strong> Used only when you explicitly select a contact via the contact picker to create customer or vendor records within the app.</li>
-        <li><strong>Location Data (Precise and Approximate):</strong> Used for branch auto-fill and geolocation features. We collect both precise (GPS) and approximate (network-based) location. Location access is requested at runtime with an in-app disclosure before first use.</li>
-        <li><strong>Photos:</strong> Used for attaching invoice photos, receipt images, and business documents within the app.</li>
-        <li><strong>Audio/Voice:</strong> Used for speech recognition to enable voice-based data entry. Audio is processed ephemerally — it is converted to text in real time and the raw audio recording is not stored.</li>
-        <li><strong>Device Identifiers:</strong> Used to deliver push notifications, including payment reminders and app updates, via Firebase Cloud Messaging.</li>
-    </ul>
-
-    <h2>4. Biometric Authentication</h2>
-    <p>Karobar360 supports fingerprint and biometric login for secure access. Biometric data is processed entirely on your device using Android's BiometricPrompt API. We do not collect, store, or transmit any biometric data to our servers.</p>
+    <h2>4. Information Collected Off-Device</h2>
+    <p>The only data transmitted off your device is:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Purpose</th>
+                <th>Sent To</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Device Identifier (Push Token)</strong></td>
+                <td>Required for delivering payment reminders and app notifications via Firebase Cloud Messaging</td>
+                <td>Google (Firebase)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>This device token is required for the app to function and cannot be opted out of. It does not contain any personal or business data.</p>
 
     <h2>5. SMS Share Feature</h2>
-    <p>Karobar360 appears in Android's Share sheet for text content. This allows you to share bank SMS messages to the app for analysis. The app only receives messages you explicitly choose to share — we do not access, read, or request permission to your SMS inbox.</p>
+    <p>Karobar360 appears in Android's Share sheet for text content. This allows you to share individual bank SMS messages to the app for analysis using the built-in SMS Analyzer. The app only receives the single message you explicitly choose to share — we do not access, read, or request permission to your SMS inbox. No SMS permission is declared or used.</p>
 
     <h2>6. Data Sharing</h2>
-    <p><strong>We do not share your personal data with any third parties.</strong></p>
-    <p>Your data is not sold, rented, or transferred to third-party companies or organizations. Data is transmitted only between your device and our secure servers for the purpose of providing app functionality.</p>
+    <p><strong>We do not share your personal or business data with any third parties.</strong></p>
+    <p>Your data is not sold, rented, or transferred to any third-party companies or organizations. Since Karobar360 is an offline-first app, your business data exists only on your device.</p>
 
     <h2>7. Third-Party Services</h2>
-    <p>The app uses the following third-party services that may collect data as described in their respective privacy policies:</p>
+    <p>The app uses the following third-party services:</p>
     <ul>
-        <li><strong>Firebase Cloud Messaging (Google):</strong> Used for push notifications. Collects device identifiers. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+        <li><strong>Firebase Cloud Messaging (Google):</strong> Used solely for delivering push notifications (payment reminders, app updates). Collects a device identifier token. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
         <li><strong>Google Play Services:</strong> Required for app distribution and updates. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
     </ul>
 
     <h2>8. Data Security</h2>
-    <p>We take the security of your data seriously:</p>
     <ul>
-        <li><strong>Encryption in Transit:</strong> All data transmitted between your device and our servers is encrypted using HTTPS/TLS. The app does not allow cleartext (unencrypted) network traffic.</li>
+        <li><strong>Encryption in Transit:</strong> All network communication uses HTTPS/TLS. The app does not allow cleartext (unencrypted) network traffic.</li>
+        <li><strong>On-Device Storage:</strong> All business data is stored locally in the app's private storage area, inaccessible to other apps.</li>
         <li><strong>Biometric Lock:</strong> App access can be secured with fingerprint or biometric authentication.</li>
-        <li><strong>Code Protection:</strong> The app uses ProGuard/R8 for code obfuscation and shrinking to protect against reverse engineering.</li>
+        <li><strong>Code Protection:</strong> The app uses ProGuard/R8 for code obfuscation and shrinking.</li>
     </ul>
 
     <h2>9. Data Retention and Deletion</h2>
-    <p>We retain your data for as long as your account is active or as needed to provide our services.</p>
-    <h3>Account Deletion</h3>
-    <p>You can request complete deletion of your account and all associated data. Upon deletion, we will remove all your personal information, business records, and any data stored on our servers.</p>
-    <h3>Data Deletion Without Account Removal</h3>
-    <p>You can also request deletion of specific data (such as activity history, transaction history, and images) without deleting your entire account.</p>
-    <p>To request deletion, visit: <a href="https://asaandigitalapps-prog.github.io/karobar360-privacy-policy/">Account & Data Deletion</a></p>
+    <p>Since all data is stored on your device, you are in full control of your data at all times.</p>
+
+    <h3>Account Deletion (In-App)</h3>
+    <p>You can permanently delete your account and all associated data directly within the app:</p>
+    <ul>
+        <li>Open Karobar360 and log in</li>
+        <li>Go to Profile</li>
+        <li>Scroll down to Danger Zone and tap "Delete my account"</li>
+        <li>Enter your password, type DELETE, and confirm</li>
+    </ul>
+    <p>This permanently and immediately deletes your account, credentials, recovery PIN, biometric login link, and every piece of app data on the device. Deleted data cannot be recovered.</p>
+
+    <h3>Can't Access the App?</h3>
+    <p>If you uninstalled the app or can no longer log in, email us at <a href="mailto:asaandigital.apps@gmail.com">asaandigital.apps@gmail.com</a> with the subject "Account deletion request" and the phone number you registered with. We will respond within 7 days.</p>
+    <p><strong>Note:</strong> Because your data lives only on your device, uninstalling the app also removes all app data from that device.</p>
 
     <h2>10. Children's Privacy</h2>
-    <p>Karobar360 is designed for users aged 16 and above. We do not knowingly collect personally identifiable information from children under 16. If we discover that a child under 16 has provided us with personal information, we will immediately delete it from our servers. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+    <p>Karobar360 is designed for users aged 16 and above. We do not knowingly collect personally identifiable information from children under 16. If we discover that a child under 16 has provided us with personal information, we will immediately delete it. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
 
-    <h2>11. Permissions Summary</h2>
-    <p>The following Android permissions are used by Karobar360:</p>
+    <h2>11. Android Permissions Summary</h2>
     <table>
         <thead>
             <tr>
@@ -157,14 +166,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr><td>INTERNET</td><td>Network communication with our servers</td></tr>
-            <tr><td>ACCESS_FINE_LOCATION</td><td>Precise location for branch auto-fill</td></tr>
-            <tr><td>ACCESS_COARSE_LOCATION</td><td>Approximate location for geolocation</td></tr>
-            <tr><td>CAMERA</td><td>Capturing invoice and receipt photos</td></tr>
-            <tr><td>READ_MEDIA_IMAGES</td><td>Selecting images from gallery</td></tr>
-            <tr><td>READ_CONTACTS / WRITE_CONTACTS</td><td>Contact picker for adding customers/vendors</td></tr>
-            <tr><td>RECORD_AUDIO</td><td>Speech recognition for voice input</td></tr>
-            <tr><td>USE_BIOMETRIC / USE_FINGERPRINT</td><td>Biometric login authentication</td></tr>
+            <tr><td>INTERNET</td><td>Network communication for push notifications</td></tr>
+            <tr><td>ACCESS_FINE_LOCATION</td><td>Precise location for branch auto-fill (on-device only)</td></tr>
+            <tr><td>ACCESS_COARSE_LOCATION</td><td>Approximate location for geolocation (on-device only)</td></tr>
+            <tr><td>CAMERA</td><td>Capturing invoice and receipt photos (on-device only)</td></tr>
+            <tr><td>READ_MEDIA_IMAGES</td><td>Selecting images from gallery (on-device only)</td></tr>
+            <tr><td>READ_CONTACTS / WRITE_CONTACTS</td><td>Contact picker for customers/vendors (on-device only)</td></tr>
+            <tr><td>RECORD_AUDIO</td><td>Speech recognition for voice input (ephemeral, on-device only)</td></tr>
+            <tr><td>USE_BIOMETRIC / USE_FINGERPRINT</td><td>Biometric login (handled by device hardware)</td></tr>
             <tr><td>POST_NOTIFICATIONS</td><td>Sending payment reminders and alerts</td></tr>
             <tr><td>RECEIVE_BOOT_COMPLETED</td><td>Rescheduling notifications after device restart</td></tr>
         </tbody>
@@ -176,7 +185,7 @@
     <h2>13. Contact Us</h2>
     <p>If you have any questions, concerns, or requests regarding this privacy policy or our data practices, please contact us:</p>
     <ul>
-        <li><strong>Developer:</strong> AsaanDigital</li>
+        <li><strong>Developer:</strong> Asaan Digital</li>
         <li><strong>App:</strong> Karobar360 — Digital Khata</li>
         <li><strong>Email:</strong> <a href="mailto:asaandigital.apps@gmail.com">asaandigital.apps@gmail.com</a></li>
     </ul>
@@ -184,7 +193,7 @@
 </div>
 
 <div class="footer">
-    <p>&copy; 2026 AsaanDigital. All rights reserved.</p>
+    <p>&copy; 2026 Asaan Digital. All rights reserved.</p>
     <p>This privacy policy applies to the Karobar360 mobile application available on Google Play.</p>
 </div>
 
